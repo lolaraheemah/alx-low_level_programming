@@ -2,8 +2,6 @@
 /**
  * main - Prints numbers between 00 to 89.
  *
- * Description: using the main function
- * this program prints "All possible combinations of two numbers"
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -15,18 +13,23 @@ int main(void)
 
 	while (e < 58)
 	{
-		if (e != i && e < i)
+		i = 48;
+		while (i < 58)
 		{
-			putchar(e);
-			putchar(i);
-			if (i == 57 && e == 56)
+			if (e != i && e < i)
 			{
-				break;
+				putchar(e);
+				putchar(i);
+				if (i == 57 && e == 56)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
 			}
-			putchar(',');
-			putchar(' ');
+			i++;
 		}
-		i++;
+		e++;
 	}
 	putchar('\n');
 	return (0);
