@@ -1,17 +1,19 @@
+#include <limits.h>
 #include "main.h"
 /**
- * _abs - function that computs the absolute value
- * @c: int that act as argument
- *Return: Always 0 (Success)
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
-int _abs(int c)
+int main(void)
 {
-if (c > 0 || c == 0)
-{
-return (c);
-}
-else
-{
-return (c * -1);
-}
+	int r;
+	
+	r = print_sign(98);
+	if (r < 0)
+		r *= -1;
+	_putchar(r + '0');
+	_putchar('\n');
+	return (0);
+
 }
